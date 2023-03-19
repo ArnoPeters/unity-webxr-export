@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <canvas id="qr"></canvas>
+
+    <script src="build/qrious.min.js"></script>
+    <script>
+      (function() {
+        var qr = new QRious({
+          element: document.getElementById('qr'),
+          value: window.location.href
+        });
+      })();
+    </script>
+  
     <div id="unity-container">
       <div id="unity-canvas-container">
         <canvas id="unity-canvas" style="width: 100%; height: 100%;"></canvas>
